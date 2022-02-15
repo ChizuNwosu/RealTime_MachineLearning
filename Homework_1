@@ -1,0 +1,18 @@
+## Problem 1
+# Importing libraries
+import imageio
+import torch
+
+# Inputting an image and converting it to a tensor
+img_arr = imageio.imread('/media/green-smoothie-8-1200.jpg')
+img_t = torch.from_numpy(img_arr)
+
+# Turning the tensor into floating points 
+floatValue = img_t.float()
+floatValue /= 255.0
+
+# Calculating the mean on the channel
+mC = floatValue.mean()
+mC
+
+## Problem 2
